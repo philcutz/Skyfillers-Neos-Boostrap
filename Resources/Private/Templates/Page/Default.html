@@ -19,9 +19,19 @@
 </head>
 <body>
 <f:section name="body">
-	<nav class="menu">
-		{parts.menu -> f:format.raw()}
-	</nav>
+    <div class="header">
+        <div class="container">
+            <!-- logo -->
+            <div class="logo">
+                <a href="index.html"><img src="{f:uri.resource(path: 'images/logo.png', package: 'neos.leer')}" title="carwash" /></a>
+            </div>
+            <!-- /logo -->
+            <!-- top-nav -->
+            <div class="top-nav">
+                <span class="menu"> </span>
+                {parts.menu -> f:format.raw()}
+            </div>
+        </div>
 	<nav class="breadcrumb">
 		{parts.breadcrumb -> f:format.raw()}
 	</nav>
