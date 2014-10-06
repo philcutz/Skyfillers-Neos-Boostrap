@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+	<f:section name="stylesheets">
+        <link rel="stylesheet" href="{f:uri.resource(path: 'css/bootstrap.css', package: 'neos.leer')}" media="all" />
+        <link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'neos.leer')}" media="all" />
+        <!-- webfonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800|Comfortaa:700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa:700,300,400' rel='stylesheet' type='text/css'>
+        <!-- webfonts -->
+	</f:section>
+	<f:section name="headScripts">
+        <script src="{f:uri.resource(path: 'js/jquery.min.js', package: 'neos.leer')}"></script>
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    </f:section>
+</head>
+<body>
+<f:section name="body">
+	<nav class="menu">
+		{parts.menu -> f:format.raw()}
+	</nav>
+	<nav class="breadcrumb">
+		{parts.breadcrumb -> f:format.raw()}
+	</nav>
+	<div class="content">
+		{content.main -> f:format.raw()}
+	</div>
+</f:section>
+<f:section name="bodyScripts">
+	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+</f:section>
+</body>
+</html>
