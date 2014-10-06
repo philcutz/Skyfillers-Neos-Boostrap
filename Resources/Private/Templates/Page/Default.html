@@ -14,7 +14,15 @@
 	<f:section name="headScripts">
         <script src="{f:uri.resource(path: 'js/jquery.min.js', package: 'neos.leer')}"></script>
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
+        <!-- script-for-nav -->
+        <script>
+            $(document).ready(function(){
+                $("span.menu").click(function(){
+                    $(".top-nav ul").slideToggle(1000);
+                });
+            });
+        </script>
+        <!-- script-for-nav -->
     </f:section>
 </head>
 <body>
