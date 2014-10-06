@@ -21,7 +21,8 @@ page = Page {
 			menu = Menu {
                 templatePath = 'resource://neos.leer/Private/Templates/TypoScriptObjects/MainMenu.html'
                 entryLevel = 1
-                maximumLevels = 0
+                maximumLevels = 2
+                itemCollection = ${q(site).add(q(site).children('[instanceof TYPO3.Neos:Document]')).get()}
             }
 			breadcrumb = Breadcrumb
 		}
