@@ -21,9 +21,16 @@ page = Page {
 			menu = Menu {
                 templatePath = 'resource://neos.leer/Private/Templates/TypoScriptObjects/MainMenu.html'
                 entryLevel = 1
-                maximumLevels = 0
+                maximumLevels = 2
+                itemCollection = ${q(site).add(q(site).children('[instanceof TYPO3.Neos:Document]')).get()}
             }
 			breadcrumb = Breadcrumb
+            metaMenu = Menu {
+                entryLevel = 1
+                templatePath = 'resource://neos.leer/Private/Templates/TypoScriptObjects/MetaMenu.html'
+                maximumLevels = 2
+                itemCollection = ${q(site).add(q(site).children('[instanceof TYPO3.Neos:Document]')).get()}
+            }
 		}
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {

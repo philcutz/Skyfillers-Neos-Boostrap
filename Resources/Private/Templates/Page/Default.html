@@ -3,34 +3,56 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 <html>
 <head>
-	<f:section name="stylesheets">
+    <f:section name="stylesheets">
         <link rel="stylesheet" href="{f:uri.resource(path: 'css/bootstrap.css', package: 'neos.leer')}" media="all" />
         <link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css', package: 'neos.leer')}" media="all" />
         <!-- webfonts -->
         <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800|Comfortaa:700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Comfortaa:700,300,400' rel='stylesheet' type='text/css'>
         <!-- webfonts -->
-	</f:section>
-	<f:section name="headScripts">
+    </f:section>
+    <f:section name="headScripts">
         <script src="{f:uri.resource(path: 'js/jquery.min.js', package: 'neos.leer')}"></script>
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
+        <!-- script-for-nav -->
+        <script>
+            $(document).ready(function(){
+                $("span.menu").click(function(){
+                    $(".top-nav ul").slideToggle(1000);
+                });
+            });
+        </script>
+        <!-- script-for-nav -->
     </f:section>
 </head>
 <body>
 <f:section name="body">
-	<nav class="menu">
-		{parts.menu -> f:format.raw()}
-	</nav>
-	<nav class="breadcrumb">
-		{parts.breadcrumb -> f:format.raw()}
-	</nav>
-	<div class="content">
-		{content.main -> f:format.raw()}
-	</div>
+    <div class="header">
+        <div class="container">
+            <!-- logo -->
+            <div class="logo">
+                <a href="index.html"><img src="{f:uri.resource(path: 'images/logo.png', package: 'neos.leer')}" title="carwash" /></a>
+            </div>
+            <!-- /logo -->
+            <!-- top-nav -->
+            <div class="top-nav">
+                <span class="menu"> </span>
+                {parts.menu -> f:format.raw()}
+            </div>
+        </div>
+        <nav class="breadcrumb">
+            {parts.breadcrumb -> f:format.raw()}
+        </nav>
+        <div class="content">
+            {content.main -> f:format.raw()}
+        </div>
+        <div class="metaMenu">
+            {parts.metaMenu -> f:format.raw()}
+        </div>
+    </div>
 </f:section>
 <f:section name="bodyScripts">
-	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+    <!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
 </f:section>
 </body>
 </html>
