@@ -1,0 +1,55 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<div class="footer">
+    <div class="container">
+        <div class="footer-grids">
+            <div class="col-md-3">
+                <div class="footer-grid">
+                    {footerItems -> f:format.raw()}
+                    <h5>About CarWash</h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis, urna a aliquam rhoncus,</p>
+                    <p> Ut ultrices diam enim, eget consectetur elit iaculis eu</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-grid f-blog">
+                    {footerItems2 -> f:format.raw()}
+                    <h5>Form the Blog</h5>
+                    <div class="f-blog-artical">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <span>March 20,2014</span>
+                    </div>
+                    <div class="f-blog-artical f-blog-artical1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <span>March 20,2014</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-grid site-map">
+                    <h5>Site Map</h5>
+                    {metaMenu -> f:format.raw()}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-grid f-gallery">
+                    <h5>Form the Gallery</h5>
+                    <div class="f-gallery-grids">
+                        <div class="f-gallery-grid">
+                            <ul>
+                                <li><a href="#"><img src="images/people-pic.jpg" title="name" /></a></li>
+                                <li><a href="#"><img src="images/people-pic1.jpg" title="name" /></a></li>
+                                <li><a href="#"><img src="images/people-pic4.jpg" title="name" /></a></li>
+                                <li><a href="#"><img src="images/people-pic3.jpg" title="name" /></a></li>
+                                <li><a href="#"><img src="images/people-pic4.jpg" title="name" /></a></li>
+                                <li><a href="#"><img src="images/people-pic1.jpg" title="name" /></a></li>
+                                <div class="clearfix">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
