@@ -32,11 +32,29 @@
       ui:
         label: 'Headline'
         inlineEditable: TRUE
-    text:
+    text1:
       type: string
       defaultValue: 'Replace by your text ...'
       ui:
-        label: 'Text'
+        label: 'Text1'
+        reloadIfChanged: TRUE
+    date1:
+      type: string
+      defaultValue: 'Replace by your Date ...'
+      ui:
+        label: 'Date1'
+        reloadIfChanged: TRUE
+    text2:
+      type: string
+      defaultValue: 'Replace by your text ...'
+      ui:
+        label: 'Text2'
+        reloadIfChanged: TRUE
+    date2:
+      type: string
+      defaultValue: 'Replace by your Date ...'
+      ui:
+        label: 'Date2'
         reloadIfChanged: TRUE
 
 'neos.leer:YourContentElementName':

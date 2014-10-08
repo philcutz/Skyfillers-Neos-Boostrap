@@ -13,7 +13,10 @@ prototype(neos.leer:FooterBlog) < prototype(TYPO3.Neos:Content) {
     templatePath = 'resource://neos.leer/Private/Templates/TypoScriptObjects/FooterBlog.html'
 
     headline = ${q(node).property('headline')}
-    text = ${q(node).property('text')}
+    text1 = ${q(node).property('text1')}
+    date1 = ${q(node).property('date1')}
+    text2 = ${q(node).property('text2')}
+    date2 = ${q(node).property('date2')}
 }
 page = Page {
 	head {
