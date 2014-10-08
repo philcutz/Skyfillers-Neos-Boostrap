@@ -4,6 +4,15 @@
 # only those that are rendered in your TypoScript and Template
 # are visible on your page.
 ---
-
-
-
+'neos.leer:Footer':
+  superTypes: ['TYPO3.Neos:Content']
+  childNodes:
+    footerItems:
+      type: 'TYPO3.Neos:ContentCollection'
+    footerItems2:
+      type: 'TYPO3.Neos:ContentCollection'
+  ui:
+    label: 'Footer'
+    group: 'plugins'
+    icon: 'icon-picture'
+    inlineEditable: TRUE
