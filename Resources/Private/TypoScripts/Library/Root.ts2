@@ -1,6 +1,8 @@
 /**
  * Root TypoScript template for the Bootstrap site
  */
+include: NodeTypes/NewsMenu.ts2
+
 prototype(neos.leer:YourContentElementName) < prototype(TYPO3.Neos:Content) {
     templatePath = 'resource://neos.leer/Private/Templates/TypoScriptObjects/YourContentElementName.html'
 
@@ -88,4 +90,14 @@ page = Page {
 
         }
 	}
+}
+
+default < page
+news < page
+news {
+    body {
+        templatePath = 'resource://neos.leer/Private/Templates/Page/News.html'
+        headline = ${q(node).property('headline')}
+        text = ${q(node).property('text')}
+    }
 }

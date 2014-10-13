@@ -19,6 +19,47 @@
     icon: 'icon-picture'
     inlineEditable: TRUE
 
+'neos.leer:News':
+  superTypes: ['TYPO3.Neos:Page']
+  ui:
+    label: 'News'
+    group: 'general'
+    icon: 'icon-picture'
+  properties:
+    layout:
+      type: string
+      defaultValue: 'news'
+      ui:
+        label: 'Layout'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'layout'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: 'Set by default'
+            values: []
+    headline:
+      type: string
+      defaultValue: 'defaulheadline'
+      ui:
+        label: 'Headline'
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+        inspector:
+          group: 'document'
+    text:
+      type: string
+      defaultValue: 'Dein Text der News'
+      ui:
+        label: 'NewsText'
+        reloadIfChanged: True
+
+'neos.leer:NewsMenu':
+  supertypes: ['TYPO3.Neos:Menu']
+  ui:
+    label: 'NewsMenu'
+    group: 'plugins'
+
 'neos.leer:FooterBlog':
   superTypes:
     - 'TYPO3.Neos:Content'

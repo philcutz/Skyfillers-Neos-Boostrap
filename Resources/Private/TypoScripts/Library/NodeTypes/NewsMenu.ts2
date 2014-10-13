@@ -1,0 +1,4 @@
+prototype(neos.leer:NewsMenu) < prototype(TYPO3.Neos.NodeTypes:Menu) {
+
+    startingPoint = ${q(site).find('subpage').get(0)}
+}

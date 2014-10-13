@@ -46,7 +46,19 @@
         <div class="content">
             {content.main -> f:format.raw()}
         </div>
-
+        <div>
+            <neos:contentElement.wrap node="{node}">
+                <h1>
+                    {neos:contentElement.editable(property: 'headline')}
+                </h1>
+                <p>
+                    {neos:contentElement.editable(property: 'text')}
+                </p>
+            </neos:contentElement.wrap>
+        </div>
+        <div>
+            {content.text -> f:format.raw()}
+        </div>
         <div class="footer">
             <div class="container">
                 <div class="footer-grids">
